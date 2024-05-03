@@ -1,6 +1,6 @@
 <html>
   <head></head>
-  <body>
+  <body style="background-color: green">
     <b>Some text</b>
     <img src="Images/test.jpg" width="400">
   </body>
