@@ -1,1 +1,22 @@
-some text here
+Imports System.IO
+
+Dim allDrives() As DriveInfo = DriveInfo.GetDrives()
+For Each d As DriveInfo In allDrives
+            Console.WriteLine("Drive {0}", d.Name)
+            Console.WriteLine("  Drive type: {0}", d.DriveType)
+            If d.IsReady = True Then
+                Console.WriteLine("  Volume label: {0}", d.VolumeLabel)
+                Console.WriteLine("  File system: {0}", d.DriveFormat)
+                Console.WriteLine( _
+                    "  Available space to current user:{0, 15} bytes", _
+                    d.AvailableFreeSpace)
+
+                Console.WriteLine( _
+                    "  Total available space:          {0, 15} bytes", _
+                    d.TotalFreeSpace)
+
+                Console.WriteLine( _
+                    "  Total size of drive:            {0, 15} bytes ", _
+                    d.TotalSize)
+            End If
+Next
